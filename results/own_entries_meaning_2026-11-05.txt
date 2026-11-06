@@ -1,0 +1,4 @@
+Own-entries test (code_recycle 0.1.0.dev0)
+Research entries indexed: 252. Test cases (entries sharing a source with another): 49, from 5 projects
+MRR: 0.2496
+Hit rate at 5: 0.3061

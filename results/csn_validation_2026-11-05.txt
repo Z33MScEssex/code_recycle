@@ -1,0 +1,31 @@
+Embedding 23000 functions with BAAI/bge-small-en-v1.5...
+group 1 of 23
+group 2 of 23
+group 3 of 23
+group 4 of 23
+group 5 of 23
+group 6 of 23
+group 7 of 23
+group 8 of 23
+group 9 of 23
+group 10 of 23
+group 11 of 23
+group 12 of 23
+group 13 of 23
+group 14 of 23
+group 15 of 23
+group 16 of 23
+group 17 of 23
+group 18 of 23
+group 19 of 23
+group 20 of 23
+group 21 of 23
+group 22 of 23
+group 23 of 23
+CodeSearchNet Python, csn_python_valid.parquet, model BAAI/bge-small-en-v1.5
+Queries: 23000 in 23 groups of 1000 (1 right answer, 999 distractors), seed 2026
+keyword  MRR 0.8067   hit rate at 5: 0.8824
+meaning  MRR 0.9037   hit rate at 5: 0.9498
+both     MRR 0.8799   hit rate at 5: 0.9405
+Functions that didn't parse (docstring left in): 289
+Queries with no keyword matches: 28

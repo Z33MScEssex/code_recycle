@@ -1,0 +1,11 @@
+# Settings for the 5-minute demo. Run from this folder:
+#   code-recycle index
+#   code-recycle search "read a settings file"
+
+[index]
+folders = ["."]
+index_path = ".code_recycle/index.db"
+
+[rules]
+no_suggest_from = []
+no_suggest_into = []

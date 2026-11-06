@@ -1,0 +1,23 @@
+[build-system]
+requires = ["hatchling >= 1.26"]
+build-backend = "hatchling.build"
+
+[project]
+name = "code-recycle"
+version = "0.1.0.dev0"
+description = "Search your own code and verified sources before searching the web. Local, private, and usable from any MCP client."
+readme = "README.md"
+license = "MIT"
+requires-python = ">=3.11"
+dependencies = [
+  "pathspec==1.1.1",
+  "detect-secrets==1.5.0",
+  "mcp==2.3.0",
+]
+
+[project.scripts]
+code-recycle = "code_recycle.cli:main"
+
+[project.optional-dependencies]
+embed = ["fastembed==0.9.1"]
+dev = ["pytest==9.1.1", "anyio", "pyarrow==22.0.0", "numpy"]

@@ -1,0 +1,11 @@
+.venv/
+dist/
+__pycache__/
+*.egg-info/
+.code_recycle/
+/code_recycle.toml
+docs/research_plan.md
+docs/reviews/
+docs/gpt_brief.md
+data/*.parquet
+docs/project_plan.md

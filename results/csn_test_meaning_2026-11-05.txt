@@ -1,0 +1,6 @@
+Embedding 22000 functions with BAAI/bge-small-en-v1.5...
+CodeSearchNet Python, csn_python_test.parquet, model BAAI/bge-small-en-v1.5
+Queries: 22000 in 22 groups of 1000 (1 right answer, 999 distractors), seed 2026
+meaning  MRR 0.9067   hit rate at 5: 0.9534
+Functions that didn't parse (docstring left in): 227
+Queries with no keyword matches: 19
