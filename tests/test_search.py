@@ -1,3 +1,5 @@
+import os
+
 import pytest
 
 from code_recycle import index, search, settings
@@ -121,6 +123,7 @@ def test_a_blocked_copy_never_hides_an_allowed_copy(make_tree, write_settings):
 
 def test_index_path_with_awkward_characters_opens(make_tree, write_settings):
     make_tree({"a.py": "def odd_name():\n    pass\n"})
-    s = settings.load(write_settings('[index]\nfolders = ["."]\nindex_path = "my index #1?/idx.db"\n'))
+    awkward = "my index #1%" + ("" if os.name == "nt" else "?")  # Windows forbids "?" in a file name
+    s = settings.load(write_settings(f'[index]\nfolders = ["."]\nindex_path = "{awkward}/idx.db"\n'))
     index.build(s, progress=lambda m: None)
     assert search.search(s, "odd name").results[0].name == "odd_name"

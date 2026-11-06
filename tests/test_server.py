@@ -1,4 +1,6 @@
 """The MCP tool, tested in memory with the SDK's own Client (MCP SDK docs, "Testing")."""
+from pathlib import Path
+
 import pytest
 from mcp import Client
 
@@ -37,7 +39,8 @@ async def test_the_tool_returns_file_and_lines(server):
     async with Client(mcp, raise_exceptions=True) as client:
         result = await client.call_tool("search_own_work", {"query": "retry with backoff"})
     text = result.content[0].text
-    assert "retry_with_backoff (function)" in text and "lib/retry.py:1-3" in text
+    # the path is printed in the system's own style, so backslashes on Windows
+    assert "retry_with_backoff (function)" in text and f"{Path('lib/retry.py')}:1-3" in text
 
 
 @pytest.mark.anyio
