@@ -4,7 +4,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "code-recycle"
-version = "0.1.0.dev0"
+version = "0.1.0"
 description = "Search your own code and verified sources before searching the web. Local, private, and usable from any MCP client."
 readme = "README.md"
 license = "MIT"
